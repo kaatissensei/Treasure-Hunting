@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://df38c3p14k5i8"]
+
+[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/textures/FOT-Seurat Pro B.otf" id="1_puct8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ury8x"]
+content_margin_left = 20.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[resource]
+RichTextLabel/colors/default_color = Color(0.096204735, 0.09620475, 0.096204735, 1)
+RichTextLabel/font_sizes/normal_font_size = 50
+RichTextLabel/fonts/normal_font = ExtResource("1_puct8")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_ury8x")

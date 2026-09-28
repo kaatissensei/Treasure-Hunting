@@ -1,0 +1,66 @@
+[gd_resource type="Theme" format=3 uid="uid://g2bngjdwtasr"]
+
+[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/textures/FOT-Seurat Pro B.otf" id="1_p2k1x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2k1x"]
+bg_color = Color(0.9019608, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1u4"]
+bg_color = Color(0.9019608, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stmet"]
+bg_color = Color(0.9019608, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[resource]
+LineEdit/colors/font_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
+LineEdit/colors/font_outline_color = Color(0, 0, 0, 0.6862745)
+LineEdit/constants/minimum_character_width = 1
+LineEdit/constants/outline_size = 9
+LineEdit/font_sizes/font_size = 50
+LineEdit/fonts/font = ExtResource("1_p2k1x")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_p2k1x")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_p2k1x")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_p2k1x")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 0.6666667)
+RichTextLabel/constants/outline_size = 10
+RichTextLabel/font_sizes/normal_font_size = 64
+RichTextLabel/fonts/normal_font = ExtResource("1_p2k1x")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_tg1u4")
+SpinBox/constants/buttons_width = 25
+SpinBox/constants/field_and_buttons_separation = -2
+SpinBox/styles/down_background = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/down_background_disabled = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/down_background_hovered = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/down_background_pressed = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/up_background = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/up_background_disabled = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/up_background_hovered = SubResource("StyleBoxFlat_stmet")
+SpinBox/styles/up_background_pressed = SubResource("StyleBoxFlat_stmet")

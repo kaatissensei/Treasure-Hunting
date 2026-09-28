@@ -1,0 +1,90 @@
+[gd_resource type="Theme" format=3 uid="uid://cj6bpqlotdbwj"]
+
+[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/textures/FOT-Seurat Pro B.otf" id="1_krfic"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krfic"]
+bg_color = Color(0.14636442, 0.57766116, 0.99997944, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.088538416, 0.13674888, 0.83645827, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1bqk"]
+bg_color = Color(0, 0.45490196, 0.83137256, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.088538416, 0.13674888, 0.83645827, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Gradient" id="Gradient_0oeu6"]
+offsets = PackedFloat32Array(0, 0.4, 0.62857145, 0.7)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.6748149, 0.6748145, 0.6748146, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_krfic"]
+gradient = SubResource("Gradient_0oeu6")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_krfic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0oeu6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oeu6"]
+bg_color = Color(0.38431373, 0.38431373, 0.38431373, 0.78431374)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uu20"]
+bg_color = Color(0.96862745, 0.98039216, 0.75686276, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.99999994, 0.91475236, 0.31077436, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1bqk"]
+
+[resource]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_krfic")
+Button/styles/hover = SubResource("StyleBoxFlat_krfic")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_y1bqk")
+Button/styles/normal = SubResource("StyleBoxFlat_y1bqk")
+Button/styles/pressed = SubResource("StyleBoxFlat_y1bqk")
+HSlider/icons/grabber = SubResource("GradientTexture2D_krfic")
+HSlider/icons/grabber_highlight = SubResource("GradientTexture2D_krfic")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_krfic")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_0oeu6")
+HSlider/styles/slider = SubResource("StyleBoxFlat_0oeu6")
+Panel/styles/panel = SubResource("StyleBoxFlat_3uu20")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_3uu20")
+RichTextLabel/colors/default_color = Color(0.07683582, 0.07683582, 0.07683582, 1)
+RichTextLabel/font_sizes/normal_font_size = 50
+RichTextLabel/fonts/normal_font = ExtResource("1_krfic")
+RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_y1bqk")

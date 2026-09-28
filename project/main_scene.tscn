@@ -1,0 +1,3627 @@
+[gd_scene format=3 uid="uid://cogcslt77w52o"]
+
+[ext_resource type="Script" uid="uid://ceio0p06sov5e" path="res://scripts/main_scene.gd" id="1_2c62f"]
+[ext_resource type="Texture2D" uid="uid://cnaow6a5kwaoy" path="res://assets/textures/ACNH beach.png" id="2_d5x1h"]
+[ext_resource type="Texture2D" uid="uid://osw28ucenv7y" path="res://assets/textures/ACNH_digspot.png" id="2_gyfs4"]
+[ext_resource type="Texture2D" uid="uid://dfjtr0ftoqncm" path="res://assets/textures/ACNH_hole.png" id="3_d5x1h"]
+[ext_resource type="Script" uid="uid://ccxkjdggv2681" path="res://scripts/dig_spot_container.gd" id="3_wr18j"]
+[ext_resource type="Texture2D" uid="uid://cpamy7mao05b5" path="res://assets/textures/ACNH_rock1.png" id="5_nfk4m"]
+[ext_resource type="Texture2D" uid="uid://ynvpicmv1mfs" path="res://assets/textures/ACNH_rock3.png" id="6_66tet"]
+[ext_resource type="Texture2D" uid="uid://jcm3mcpdnhit" path="res://assets/textures/ACNH_rock4.png" id="7_7ycvg"]
+[ext_resource type="Shader" uid="uid://bx445ux65s5ck" path="res://assets/starburst.gdshader" id="8_yj5sn"]
+[ext_resource type="Texture2D" uid="uid://io8b6s70omjc" path="res://assets/textures/Sand letters.png" id="9_wr18j"]
+[ext_resource type="Texture2D" uid="uid://vfnlfyaqy1w1" path="res://assets/textures/Sand numbers.png" id="10_uws2o"]
+[ext_resource type="Texture2D" uid="uid://c2r8grdtf7cv3" path="res://assets/textures/ACNH_beach_bg.png" id="12_2jcla"]
+[ext_resource type="Texture2D" uid="uid://uo3628p70sg5" path="res://assets/textures/Gullivarrr_NH.png" id="12_671wp"]
+[ext_resource type="Texture2D" uid="uid://llf3argamj5c" path="res://assets/textures/Kappn_aerial_sm_back.png" id="12_meb7l"]
+[ext_resource type="FontFile" uid="uid://cmury233g0hmv" path="res://assets/FinkHeavy.ttf" id="13_42l1d"]
+[ext_resource type="Texture2D" uid="uid://us0ghcdm13tl" path="res://assets/textures/Treasure_Hunting_Logo.png" id="14_2jcla"]
+[ext_resource type="Theme" uid="uid://ddqmdm0ekcfp5" path="res://main_menu.tres" id="16_m35m6"]
+[ext_resource type="Material" uid="uid://dc53vthq6dnra" path="res://speed_lines_shader.tres" id="18_6jybn"]
+[ext_resource type="Theme" uid="uid://df38c3p14k5i8" path="res://dialog.tres" id="18_o4fqm"]
+[ext_resource type="Script" uid="uid://bv8q6t0ffmapo" path="res://how_to_play_menu.gd" id="18_w30ff"]
+[ext_resource type="Texture2D" uid="uid://bvtsof37qqvi4" path="res://assets/textures/ACNH_bells.png" id="19_1n88h"]
+[ext_resource type="Texture2D" uid="uid://bq2hso20odbl4" path="res://assets/textures/Kappn_moving.png" id="19_84odl"]
+[ext_resource type="Script" uid="uid://d4f58jxnfpbys" path="res://kappn_speed.gd" id="20_84odl"]
+[ext_resource type="Texture2D" uid="uid://bgahtouwq0isc" path="res://assets/textures/ACNH_triple_bells.png" id="20_opjno"]
+[ext_resource type="Texture2D" uid="uid://d0he8tob0ao78" path="res://assets/textures/villagers/ACNH_villager_icon_red.png" id="21_j8kkg"]
+[ext_resource type="Texture2D" uid="uid://do8ssp42nn8x6" path="res://assets/textures/ACNH_treasure_chest.png" id="21_opjno"]
+[ext_resource type="Texture2D" uid="uid://b6el0nusw27ee" path="res://assets/textures/ui/ACNH_arrow.png" id="22_meb7l"]
+[ext_resource type="Theme" uid="uid://g2bngjdwtasr" path="res://score.tres" id="22_p8s74"]
+[ext_resource type="Texture2D" uid="uid://c134wsyjnxyrd" path="res://assets/textures/villagers/ACNH_villager_icon_blue.png" id="22_yh4yk"]
+[ext_resource type="Texture2D" uid="uid://dyuft8ovthssd" path="res://assets/textures/villagers/ACNH_villager_icon_yellow.png" id="23_p8s74"]
+[ext_resource type="Texture2D" uid="uid://ktnmesc1r4df" path="res://assets/textures/villagers/ACNH_villager_icon_green.png" id="24_o4fqm"]
+[ext_resource type="Texture2D" uid="uid://bf7j3yeb5qbpc" path="res://assets/textures/villagers/ACNH_villager_icon_purple.png" id="25_gfmxp"]
+[ext_resource type="Texture2D" uid="uid://dhukjack88tgf" path="res://assets/textures/villagers/ACNH_villager_icon_orange.png" id="26_1n88h"]
+[ext_resource type="Texture2D" uid="uid://cnogh8ry7g5ub" path="res://assets/textures/villagers/ACNH_villager_icon_light_blue.png" id="27_opjno"]
+[ext_resource type="Texture2D" uid="uid://dvoodakhoqndi" path="res://assets/textures/villagers/ACNH_villager_icon_pink.png" id="28_meb7l"]
+[ext_resource type="Script" uid="uid://dmmh3pfir5efa" path="res://scores.gd" id="28_uws2o"]
+[ext_resource type="Texture2D" uid="uid://d175akf874gab" path="res://assets/textures/villagers/ACNH_villager_icon_black.png" id="29_w30ff"]
+[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/textures/FOT-Seurat Pro B.otf" id="30_ek5vw"]
+[ext_resource type="Texture2D" uid="uid://bm4ryb456eli" path="res://assets/textures/villagers/ACNH_villager_icon_light_green.png" id="32_p8s74"]
+[ext_resource type="Texture2D" uid="uid://8e1m3hqlwuf3" path="res://assets/textures/ui/Edit Icon.svg" id="39_iylel"]
+[ext_resource type="Texture2D" uid="uid://ijei3qtputcl" path="res://assets/textures/ui/SettingsGear.svg" id="39_uws2o"]
+[ext_resource type="Texture2D" uid="uid://dsix0xqeyvowy" path="res://assets/textures/ui/uiBtnFullscreen_shadowed.png" id="40_iylel"]
+[ext_resource type="Theme" uid="uid://cj6bpqlotdbwj" path="res://settings.tres" id="40_uws2o"]
+[ext_resource type="Script" uid="uid://bar86886dskg6" path="res://scripts/faw_handler.gd" id="43_jtbqm"]
+
+[sub_resource type="Gradient" id="Gradient_h5hro"]
+offsets = PackedFloat32Array(0.006024096, 1)
+colors = PackedColorArray(0.00018289685, 0.5497968, 0.99398774, 1, 0.02221754, 0.2576942, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o8r1j"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_y1bqk"]
+noise = SubResource("FastNoiseLite_o8r1j")
+color_ramp = SubResource("Gradient_h5hro")
+
+[sub_resource type="Theme" id="Theme_2c62f"]
+GridContainer/constants/h_separation = 50
+GridContainer/constants/v_separation = 50
+
+[sub_resource type="Gradient" id="Gradient_yj5sn"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o8r1j"]
+gradient = SubResource("Gradient_yj5sn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1bqk"]
+shader = ExtResource("8_yj5sn")
+shader_parameter/gradient = SubResource("GradientTexture2D_o8r1j")
+shader_parameter/spread = 0.35
+shader_parameter/cutoff = 0.28
+shader_parameter/size = 0.5
+shader_parameter/speed = 2.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 16.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/core_intensity = 0.76
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
+
+[sub_resource type="Gradient" id="Gradient_jtbqm"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ek5vw"]
+gradient = SubResource("Gradient_jtbqm")
+
+[sub_resource type="Theme" id="Theme_y1bqk"]
+RichTextLabel/colors/default_color = Color(1, 0.81960785, 0.27450982, 1)
+RichTextLabel/colors/font_outline_color = Color(0.85490197, 0.627451, 0.21568628, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
+RichTextLabel/constants/outline_size = 15
+
+[sub_resource type="Gradient" id="Gradient_opjno"]
+offsets = PackedFloat32Array(0, 0.14, 0.141, 0.46, 0.461, 0.74, 0.741, 0.990099, 1)
+colors = PackedColorArray(0, 1, 0, 1, 0.04950495, 1, 0.04950495, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0.9953708, 0.49561203, 1.1551381e-06, 1, 0.99607843, 0.49411765, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jtbqm"]
+gradient = SubResource("Gradient_opjno")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3uu20"]
+
+[sub_resource type="Gradient" id="Gradient_ak604"]
+colors = PackedColorArray(0.20603538, 0.4340833, 1, 1, 3.7541986e-06, 0, 0.78320473, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y1bqk"]
+gradient = SubResource("Gradient_ak604")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Theme" id="Theme_uws2o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uu20"]
+bg_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="Theme" id="Theme_h5hro"]
+Button/colors/font_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
+Button/fonts/font = ExtResource("30_ek5vw")
+Button/styles/focus = SubResource("StyleBoxFlat_3uu20")
+Button/styles/hover = SubResource("StyleBoxFlat_3uu20")
+Button/styles/normal = SubResource("StyleBoxFlat_3uu20")
+Button/styles/pressed = SubResource("StyleBoxFlat_3uu20")
+
+[sub_resource type="Gradient" id="Gradient_w30ff"]
+offsets = PackedFloat32Array(0, 0.54950494, 0.58, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h5hro"]
+gradient = SubResource("Gradient_w30ff")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yh4yk"]
+bg_color = Color(0, 0, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8s74"]
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4fqm"]
+bg_color = Color(0, 0.6862745, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfmxp"]
+bg_color = Color(0.63529414, 0, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1n88h"]
+bg_color = Color(1, 0.5411765, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opjno"]
+bg_color = Color(0, 1, 0.9411765, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meb7l"]
+bg_color = Color(0.98039216, 0.43137255, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w30ff"]
+bg_color = Color(0.5019608, 1, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy6fp"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9647059, 0.9647059, 0.8901961, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Theme" id="Theme_o8r1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o4blg"]
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_y1bqk"]
+
+[node name="Node2D" type="Node2D" unique_id=2123553056]
+script = ExtResource("1_2c62f")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1061766391]
+
+[node name="BG_Ocean" type="TextureRect" parent="CanvasLayer" unique_id=424323830]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("NoiseTexture2D_y1bqk")
+
+[node name="Island" type="Control" parent="CanvasLayer" unique_id=1093680858]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 88.0
+offset_right = -256.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sand" type="TextureRect" parent="CanvasLayer/Island" unique_id=1083006411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_d5x1h")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Island" unique_id=1799983791]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 150
+
+[node name="DigSpotContainer" type="GridContainer" parent="CanvasLayer/Island/MarginContainer" unique_id=1230870498]
+unique_name_in_owner = true
+z_index = 5
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_2c62f")
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 7
+script = ExtResource("3_wr18j")
+
+[node name="DigSpot1" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1748642049 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot1" unique_id=381411614 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Shine" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot1" unique_id=419059744]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0, 1, 1, 1)
+z_index = -1
+material = SubResource("ShaderMaterial_y1bqk")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -115.0
+offset_right = 115.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ek5vw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigSpot2" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1167660954 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot2" unique_id=1894722629 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot3" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=41152483 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot3" unique_id=343537156 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot4" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1554934172 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot4" unique_id=2125468068 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot5" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=747249804 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot5" unique_id=217829882 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot6" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=300360528 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot6" unique_id=1628148643 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot7" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=885734489 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot7" unique_id=1981945078 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot8" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=787831327 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot8" unique_id=2010778950 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot9" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=2032419338 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot9" unique_id=1454843034 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot10" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=167579555 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot10" unique_id=1973130954 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot11" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1480352902 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot11" unique_id=225275998 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot12" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1852737174 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot12" unique_id=504880579 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot13" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1142493915 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("5_nfk4m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot13" unique_id=1211599061 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot14" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=211728273 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot14" unique_id=1114842484 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot15" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=2015495475 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot15" unique_id=16080401 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot16" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=975966599 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot16" unique_id=1681132362 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot17" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=573263917 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot17" unique_id=1746002796 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot18" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1862977090 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot18" unique_id=109841405 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot19" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=749054602 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot19" unique_id=1737950709 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot20" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1144471319 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("6_66tet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot20" unique_id=709414719 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot21" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1598568294 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot21" unique_id=1980551872 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot22" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=589852773 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot22" unique_id=1813291976 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot23" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1879668026 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot23" unique_id=347321880 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot24" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=494977683 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot24" unique_id=374856159 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot25" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1006380931 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot25" unique_id=1721315 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot26" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1881374936 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot26" unique_id=1407219482 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot27" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=630737725 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot27" unique_id=1536775848 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot28" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=781917205 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot28" unique_id=1215426532 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot29" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=963412365 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot29" unique_id=1621793876 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot30" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1926057201 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot30" unique_id=882044230 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot31" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=2050632126 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot31" unique_id=1698338857 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot32" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=911267913 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot32" unique_id=800518063 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot33" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=98683660 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot33" unique_id=1166752611 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot34" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=194154418 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot34" unique_id=866374033 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot35" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=247923608 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot35" unique_id=754069209 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot36" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=660923004 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot36" unique_id=282541747 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot37" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1256177813 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot37" unique_id=461622874 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot38" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1591639896 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot38" unique_id=1366740376 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot39" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1702486369 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot39" unique_id=59692585 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot40" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=535021995 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot40" unique_id=1028480997 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot41" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=1230353904 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot41" unique_id=554197181 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DigSpot42" type="TextureButton" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer" unique_id=217622855 groups=["DigSpot"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("2_gyfs4")
+texture_pressed = ExtResource("3_d5x1h")
+texture_disabled = ExtResource("7_7ycvg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Treasure" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot42" unique_id=1115353214 groups=["Treasure"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -62.5
+offset_right = 54.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="SandNumbers" type="TextureRect" parent="CanvasLayer/Island" unique_id=903883709]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 219.0
+offset_right = 285.0
+offset_bottom = 855.0
+texture = ExtResource("10_uws2o")
+expand_mode = 1
+
+[node name="SandLetters" type="TextureRect" parent="CanvasLayer/Island" unique_id=161355838]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -381.0
+offset_top = 149.0
+offset_right = 436.0
+offset_bottom = 208.0
+grow_horizontal = 2
+texture = ExtResource("9_wr18j")
+stretch_mode = 5
+
+[node name="Kappn" type="TextureButton" parent="CanvasLayer/Island" unique_id=1505599860]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -240.0
+offset_right = 217.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.2, 0.8)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_meb7l")
+stretch_mode = 3
+
+[node name="NextDialog" type="RichTextLabel" parent="CanvasLayer/Island/Kappn" unique_id=669351870]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 72.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme = ExtResource("18_o4fqm")
+theme_override_font_sizes/normal_font_size = 35
+text = "Next!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="TextureRect" parent="CanvasLayer" unique_id=677285629]
+unique_name_in_owner = true
+z_index = 150
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_2jcla")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainMenu" unique_id=1769303422]
+layout_mode = 0
+offset_left = 1255.0
+offset_top = 243.0
+offset_right = 1872.0
+offset_bottom = 1013.0
+texture = ExtResource("12_671wp")
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MainMenu" unique_id=779884310]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 139.0
+offset_right = 1196.0
+offset_bottom = 726.0
+theme = SubResource("Theme_y1bqk")
+theme_override_colors/default_color = Color(1, 0.81960785, 0.27450982, 1)
+theme_override_fonts/normal_font = ExtResource("13_42l1d")
+theme_override_font_sizes/normal_font_size = 300
+bbcode_enabled = true
+text = "Treasure
+Hunt"
+horizontal_alignment = 1
+
+[node name="Logo" type="TextureRect" parent="CanvasLayer/MainMenu" unique_id=1650820498]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -28.0
+offset_right = 1185.0
+offset_bottom = 772.0
+texture = ExtResource("14_2jcla")
+
+[node name="StartBtn" type="Button" parent="CanvasLayer/MainMenu" unique_id=448266956]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 816.0
+offset_right = 875.0
+offset_bottom = 946.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("16_m35m6")
+theme_override_font_sizes/font_size = 95
+text = "Start!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainMenu" unique_id=1120347235]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 175.0
+offset_top = -402.0
+offset_right = 1064.0
+offset_bottom = -272.0
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="RulesBtn" type="Button" parent="CanvasLayer/MainMenu/HBoxContainer" unique_id=1194176402]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("16_m35m6")
+text = "How to Play"
+
+[node name="LoadCSVBtn" type="Button" parent="CanvasLayer/MainMenu/HBoxContainer" unique_id=1512149024]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("16_m35m6")
+text = "Load .csv"
+
+[node name="HowToPlayMenu" type="TextureRect" parent="CanvasLayer" unique_id=1093813783]
+unique_name_in_owner = true
+visible = false
+z_index = 151
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_2jcla")
+script = ExtResource("18_w30ff")
+
+[node name="HowToPlay" type="RichTextLabel" parent="CanvasLayer/HowToPlayMenu" unique_id=639942295 groups=["HowToPlay"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -760.0
+offset_top = -522.0
+offset_right = 760.0
+offset_bottom = 452.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("18_o4fqm")
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+text = " [center][u]How to Play[/u][/center]
+
+ 1. Answer the question.
+ 2. Show the teacher.
+ 3. Tap a
+ 4. Tap your
+
+	 	 1pt:		    3pts:		  5pts:
+
+		 = Everyone sit down.
+			Next question.
+"
+
+[node name="DigspotImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay" unique_id=375824457]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 357.0
+offset_right = 463.0
+offset_bottom = 481.0
+texture = ExtResource("2_gyfs4")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="BellImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay" unique_id=114632115]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 548.0
+offset_right = 549.0
+offset_bottom = 737.0
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="BellBagImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay" unique_id=2052329922]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 550.0
+offset_right = 981.0
+offset_bottom = 732.0
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TreasureImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay" unique_id=2058694616]
+layout_mode = 0
+offset_left = 1220.0
+offset_top = 530.0
+offset_right = 1443.9814
+offset_bottom = 735.0
+texture = ExtResource("21_opjno")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TreasureImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay" unique_id=39061849]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 714.0
+offset_right = 246.98145
+offset_bottom = 919.0
+texture = ExtResource("21_opjno")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CharImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay" unique_id=126083718]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 423.0
+offset_right = 614.0
+offset_bottom = 563.0
+texture = ExtResource("21_j8kkg")
+
+[node name="HowToPlay2" type="RichTextLabel" parent="CanvasLayer/HowToPlayMenu" unique_id=296115492 groups=["HowToPlay"]]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -760.0
+offset_top = -522.0
+offset_right = 760.0
+offset_bottom = 453.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("18_o4fqm")
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+
+[node name="Sand" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2" unique_id=1259871618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_d5x1h")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HowToPlayMenu/HowToPlay2" unique_id=1634021907]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 350
+theme_override_constants/margin_bottom = 150
+
+[node name="PointGradient" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer" unique_id=231555990]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_jtbqm")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer" unique_id=1417240854]
+layout_mode = 2
+columns = 7
+
+[node name="DigspotImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=211935883]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=945361717]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage3" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=855895892]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage4" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2036951940]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage5" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=585203636]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage6" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2074937193]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage8" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=962044213]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage7" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1410369010]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=150017397]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage3" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=551300991]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage4" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2110268913]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage5" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=982776922]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1004955524]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage9" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1898014587]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage10" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=413448268]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage6" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1873576433]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1823814359]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2096475799]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage3" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1915970418]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage7" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1292098583]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage11" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1137887344]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage12" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2079831890]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage8" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=854916751]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage4" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=221671591]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TreasureImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=308122384]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("21_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage5" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1621441021]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage9" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=683873577]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage13" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1587811184]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage14" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=779339648]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage10" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1261539786]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage6" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1359939086]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage7" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=987283370]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellBagImage8" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1071635701]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("20_opjno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage11" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2074314796]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage15" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1819415265]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage16" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1532297663]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage12" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1689286561]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage13" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1426100594]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage14" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=521966146]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage15" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1995398198]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BellImage16" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=937797355]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("19_1n88h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage17" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=942895733]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage18" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=766446230]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage19" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=823040196]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage20" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1020814183]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage21" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1346765050]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage22" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=694382976]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage23" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2146728529]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigspotImage24" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1267244546]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_d5x1h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HTPPoints" type="HBoxContainer" parent="CanvasLayer/HowToPlayMenu/HowToPlay2" unique_id=291247934]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -56.5
+offset_right = 417.0
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="5" type="RichTextLabel" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/HTPPoints" unique_id=1726363383]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3uu20")
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="RichTextLabel" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/HTPPoints" unique_id=1711551310]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3uu20")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1" type="RichTextLabel" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/HTPPoints" unique_id=458270018]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3uu20")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="0" type="RichTextLabel" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/HTPPoints" unique_id=797838009]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3uu20")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HTPNextPage" type="TextureButton" parent="CanvasLayer/HowToPlayMenu" unique_id=726501922]
+unique_name_in_owner = true
+z_index = 50
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -370.0
+offset_top = -230.0
+offset_right = -243.0
+offset_bottom = -111.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("22_meb7l")
+texture_pressed = ExtResource("22_meb7l")
+texture_hover = ExtResource("22_meb7l")
+texture_focused = ExtResource("22_meb7l")
+stretch_mode = 5
+
+[node name="HTPPrevPage" type="TextureButton" parent="CanvasLayer/HowToPlayMenu" unique_id=286303264]
+unique_name_in_owner = true
+visible = false
+z_index = 50
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = -230.0
+offset_right = 367.0
+offset_bottom = -111.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("22_meb7l")
+texture_pressed = ExtResource("22_meb7l")
+texture_hover = ExtResource("22_meb7l")
+texture_focused = ExtResource("22_meb7l")
+stretch_mode = 5
+flip_h = true
+
+[node name="Speed" type="TextureRect" parent="CanvasLayer" unique_id=296539299]
+unique_name_in_owner = true
+visible = false
+z_index = 500
+material = ExtResource("18_6jybn")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_y1bqk")
+
+[node name="KappnSpeed" type="TextureRect" parent="CanvasLayer/Speed" unique_id=1992861471]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -125.0
+offset_bottom = 125.0
+grow_vertical = 2
+texture = ExtResource("19_84odl")
+script = ExtResource("20_84odl")
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1692367129]
+unique_name_in_owner = true
+visible = false
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ScoresLMargin" type="MarginContainer" parent="CanvasLayer/UI" unique_id=443873784]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 200.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 200
+
+[node name="ScoresL" type="VBoxContainer" parent="CanvasLayer/UI/ScoresLMargin" unique_id=660808096]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TeamIcon1" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=60729339]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("21_j8kkg")
+texture_pressed = ExtResource("21_j8kkg")
+texture_hover = ExtResource("21_j8kkg")
+texture_focused = ExtResource("21_j8kkg")
+stretch_mode = 5
+
+[node name="Team1Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1" unique_id=795621501]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -50.0
+offset_right = 109.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1/Team1Score" unique_id=1808021120]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1/Team1Score/ChangePts" unique_id=1236055634]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1/Team1Score/ChangePts" unique_id=539395774]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1" unique_id=1033096788]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon2" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=529420434]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("22_yh4yk")
+texture_pressed = ExtResource("22_yh4yk")
+texture_hover = ExtResource("22_yh4yk")
+texture_focused = ExtResource("22_yh4yk")
+stretch_mode = 5
+
+[node name="Team2Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2" unique_id=1672417986]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -50.0
+offset_right = 109.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yh4yk")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2/Team2Score" unique_id=1407756950]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2/Team2Score/ChangePts" unique_id=1550990919]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2/Team2Score/ChangePts" unique_id=2076714666]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2" unique_id=272686152]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon3" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=1288298464]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("23_p8s74")
+stretch_mode = 5
+
+[node name="Team3Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3" unique_id=1926205075]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -50.0
+offset_right = 109.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_p8s74")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3/Team3Score" unique_id=170110257]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3/Team3Score/ChangePts" unique_id=574198561]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3/Team3Score/ChangePts" unique_id=213123474]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3" unique_id=1323577341]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon4" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=1908665471]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("24_o4fqm")
+stretch_mode = 5
+
+[node name="Team4Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4" unique_id=617892208]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -50.0
+offset_right = 109.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4fqm")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4/Team4Score" unique_id=543769442]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4/Team4Score/ChangePts" unique_id=428845884]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4/Team4Score/ChangePts" unique_id=1900859416]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4" unique_id=1486023256]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon5L" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=1771652447]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("25_gfmxp")
+stretch_mode = 5
+
+[node name="Team5Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L" unique_id=1502497204]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -50.0
+offset_right = 109.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfmxp")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L/Team5Score" unique_id=537950843]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L/Team5Score/ChangePts" unique_id=522981189]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L/Team5Score/ChangePts" unique_id=370662233]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L" unique_id=982298601]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="ScoresRMargin" type="MarginContainer" parent="CanvasLayer/UI" unique_id=801087421]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 200
+
+[node name="ScoresR" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin" unique_id=632687555]
+z_index = -1
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TeamIcon4R" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=2027427266]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("24_o4fqm")
+stretch_mode = 5
+
+[node name="Team4Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R" unique_id=725307293]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -50.0
+offset_right = -105.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4fqm")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R/Team4Score" unique_id=1091401950]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R/Team4Score/ChangePts" unique_id=860092082]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R/Team4Score/ChangePts" unique_id=1445640780]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R" unique_id=210944893]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon5R" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=1754974800]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("25_gfmxp")
+stretch_mode = 5
+
+[node name="Team5Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R" unique_id=309167459]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -50.0
+offset_right = -105.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfmxp")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R/Team5Score" unique_id=1277316714]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R/Team5Score/ChangePts" unique_id=1687522072]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R/Team5Score/ChangePts" unique_id=1594468550]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R" unique_id=484573009]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon6" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=1117755728]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("26_1n88h")
+texture_pressed = ExtResource("26_1n88h")
+texture_hover = ExtResource("26_1n88h")
+texture_focused = ExtResource("26_1n88h")
+stretch_mode = 5
+
+[node name="Team6Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6" unique_id=575946585]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -50.0
+offset_right = 55.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1n88h")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6/Team6Score" unique_id=1712401714]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6/Team6Score/ChangePts" unique_id=940861839]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6/Team6Score/ChangePts" unique_id=1196727748]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6" unique_id=523246575]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon7" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=299036030]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("27_opjno")
+texture_pressed = ExtResource("27_opjno")
+texture_hover = ExtResource("27_opjno")
+texture_focused = ExtResource("27_opjno")
+stretch_mode = 5
+
+[node name="Team7Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7" unique_id=791669712]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -50.0
+offset_right = 55.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_opjno")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7/Team7Score" unique_id=1094589422]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7/Team7Score/ChangePts" unique_id=1202250778]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7/Team7Score/ChangePts" unique_id=836117100]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7" unique_id=1168181634]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon8" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=2054777224]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("28_meb7l")
+texture_pressed = ExtResource("28_meb7l")
+texture_hover = ExtResource("28_meb7l")
+texture_focused = ExtResource("28_meb7l")
+stretch_mode = 5
+
+[node name="Team8Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" unique_id=1736712978]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -50.0
+offset_right = 55.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_meb7l")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8/Team8Score" unique_id=832248299]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8/Team8Score/ChangePts" unique_id=902157161]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8/Team8Score/ChangePts" unique_id=2029273770]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" unique_id=1526946321]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon9" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=2028670877]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("32_p8s74")
+texture_pressed = ExtResource("32_p8s74")
+texture_hover = ExtResource("32_p8s74")
+texture_focused = ExtResource("32_p8s74")
+stretch_mode = 5
+
+[node name="Team9Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" unique_id=208427448]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -50.0
+offset_right = 55.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w30ff")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9/Team9Score" unique_id=476353855]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9/Team9Score/ChangePts" unique_id=1705238819]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9/Team9Score/ChangePts" unique_id=644692016]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" unique_id=715613654]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="TeamIcon10" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=889494399]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_uws2o")
+texture_normal = ExtResource("29_w30ff")
+texture_pressed = ExtResource("29_w30ff")
+texture_hover = ExtResource("29_w30ff")
+texture_focused = ExtResource("29_w30ff")
+stretch_mode = 5
+
+[node name="Team10Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" unique_id=759898021]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -50.0
+offset_right = 55.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("22_p8s74")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xy6fp")
+text = "0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true
+script = ExtResource("28_uws2o")
+
+[node name="ChangePts" type="VBoxContainer" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score" unique_id=1019822435]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = -124.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PtsUp" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score/ChangePts" unique_id=896998266]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▲"
+
+[node name="PtsDown" type="Button" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score/ChangePts" unique_id=865123354]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_h5hro")
+text = "▼"
+
+[node name="TeamBGCircle" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" unique_id=2097708166]
+show_behind_parent = true
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="SettingsBtn" type="TextureButton" parent="CanvasLayer/UI" unique_id=395011621]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_o8r1j")
+texture_normal = ExtResource("39_uws2o")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/SettingsBtn" unique_id=360979533]
+modulate = Color(0.07683582, 0.07683582, 0.07683582, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 82.0
+offset_bottom = 82.0
+mouse_filter = 2
+texture = ExtResource("39_uws2o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EditBtn" type="TextureButton" parent="CanvasLayer/UI" unique_id=981190772]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 86.0
+offset_right = 166.0
+offset_bottom = 80.0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_o8r1j")
+texture_normal = ExtResource("39_iylel")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI/EditBtn" unique_id=1630403194]
+modulate = Color(0.07683582, 0.07683582, 0.07683582, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 82.0
+offset_bottom = 82.0
+mouse_filter = 2
+texture = ExtResource("39_iylel")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FullScreenBtn" type="TextureButton" parent="CanvasLayer/UI" unique_id=1708868686]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_bottom = 80.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_o8r1j")
+texture_normal = ExtResource("40_iylel")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="QuestionText" type="RichTextLabel" parent="CanvasLayer/UI" unique_id=500587712]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 355.0
+offset_top = 22.0
+offset_right = -355.0
+offset_bottom = 173.0
+grow_horizontal = 2
+theme = ExtResource("18_o4fqm")
+text = "Here is a question that I can't think of."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsMenu" type="Panel" parent="CanvasLayer/UI" unique_id=574093247]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -601.0
+offset_top = -347.0
+offset_right = 601.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("40_uws2o")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/SettingsMenu" unique_id=2110267552]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 95.0
+offset_right = 1182.0
+offset_bottom = 674.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer" unique_id=76416653]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer" unique_id=1210115429]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o4blg")
+text = "# Players:"
+
+[node name="NumPlayersSlider" type="HSlider" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer" unique_id=1041378399]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("40_uws2o")
+min_value = 4.0
+max_value = 10.0
+value = 8.0
+tick_count = 7
+ticks_on_borders = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider" unique_id=390427916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = 58.0
+offset_right = 17.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(912, -530)
+
+[node name="4" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=2092818578]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "4"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="5" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=1273825443]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "5"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="6" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=1306437653]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "6"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="7" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=606126028]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "7"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="8" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=1711985465]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "8"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="9" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=788441455]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "9"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="10" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=30073182]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("40_uws2o")
+text = "10"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="OKButton" type="Button" parent="CanvasLayer/UI/SettingsMenu" unique_id=745422777]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 539.0
+offset_right = 733.0
+offset_bottom = 627.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("40_uws2o")
+text = "OK"
+
+[node name="Questions" type="Panel" parent="CanvasLayer/UI/SettingsMenu" unique_id=410352390]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("40_uws2o")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/SettingsMenu/Questions" unique_id=1130557887]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = 39.0
+offset_right = -56.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QAGrid" type="GridContainer" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer" unique_id=1293179588]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Question1" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=714485920]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question2" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=164019935]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question3" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1349751817]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question4" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=746340805]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question5" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1782288208]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question6" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=199665826]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question7" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1211816320]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question8" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1023464544]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question9" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=80969861]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="Question10" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=533161391]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu" unique_id=1475099308]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 388.0
+offset_right = 1082.0
+offset_bottom = 499.0
+theme_override_constants/separation = 50
+
+[node name="ViewQuestions" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=1172702570]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("16_m35m6")
+theme_override_fonts/font = ExtResource("30_ek5vw")
+theme_override_font_sizes/font_size = 50
+text = "Load .csv"
+
+[node name="ViewQuestions2" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=1914926275]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("16_m35m6")
+theme_override_fonts/font = ExtResource("30_ek5vw")
+theme_override_font_sizes/font_size = 50
+text = "View Questions"
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=304837307]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamPolyphonic_y1bqk")
+
+[node name="CSVHandler" type="Control" parent="." unique_id=574054578]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("43_jtbqm")
+
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot1" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot2" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot3" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot4" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot5" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot6" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot7" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot8" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot9" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot10" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot11" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot12" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot13" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot14" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot15" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot16" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot17" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot18" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot19" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot20" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot21" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot22" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot23" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot24" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot25" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot26" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot27" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot28" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot29" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot30" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot31" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot32" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot33" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot34" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot35" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot36" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot37" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot38" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot39" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot40" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot41" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot42" to="." method="_dig" flags=18]
+[connection signal="pressed" from="CanvasLayer/Island/Kappn" to="." method="_next_sentence"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/StartBtn" to="." method="_start_game"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/HBoxContainer/RulesBtn" to="CanvasLayer/HowToPlayMenu" method="_open_how_to_play"]
+[connection signal="pressed" from="CanvasLayer/HowToPlayMenu/HTPNextPage" to="CanvasLayer/HowToPlayMenu" method="_h2p_next"]
+[connection signal="pressed" from="CanvasLayer/HowToPlayMenu/HTPPrevPage" to="CanvasLayer/HowToPlayMenu" method="_h2p_prev"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1" to="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1/Team1Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2" to="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2/Team2Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3" to="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3/Team3Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4" to="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4/Team4Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L" to="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L/Team5Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R/Team4Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R/Team5Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6/Team6Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7/Team7Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8/Team8Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9/Team9Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score" method="_add_points"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsBtn" to="." method="_open_settings_menu"]
+[connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider" to="." method="_update_num_teams"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/OKButton" to="." method="_close_settings_menu"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/ViewQuestions" to="." method="_show_questions"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/ViewQuestions2" to="." method="_show_questions"]

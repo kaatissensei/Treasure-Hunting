@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dc53vthq6dnra"]
+
+[ext_resource type="Shader" uid="uid://s2usiv70cxcn" path="res://FallingLines.gdshader" id="1_rthmm"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7th4q"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_u0ygc"]
+noise = SubResource("FastNoiseLite_7th4q")
+seamless = true
+
+[resource]
+shader = ExtResource("1_rthmm")
+shader_parameter/noise = SubResource("NoiseTexture2D_u0ygc")
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 1, 1, 1)
+shader_parameter/line_threshold = 0.6
+shader_parameter/inverse_speed = 10.0
+shader_parameter/line_length = 1000.0
+shader_parameter/angle = 0.0
