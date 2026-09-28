@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="200" height="200">
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 25 } 
+		.s1 { fill: none;stroke: #ffffff;stroke-linejoin: round;stroke-width: 25 } 
+	</style>
+	<g id="Edit">
+		<path id="Pencil" fill-rule="evenodd" class="s0" d="m435.56 48.45l35.5 34.49c10.6 10.3 8.12 29.24-5.54 42.32l-34.95 33.53-285.84 273.81c-106.58 31.71-101.11 31.72-106.72 32.35l-0.98 0.13 0.03-1.05c0.2-1.54-0.27-1.03 34.23-103.79l284.1-272.13 36.24-34.62c13.66-13.08 33.32-15.33 43.93-5.04z"/>
+		<path id="Eraser line" fill-rule="evenodd" class="s1" d="m351.23 114.72l0.61-0.59 50.39 48.5-0.61 0.59z"/>
+	</g>
+</svg>
