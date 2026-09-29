@@ -30,20 +30,24 @@
 [ext_resource type="Theme" uid="uid://g2bngjdwtasr" path="res://score.tres" id="22_p8s74"]
 [ext_resource type="Texture2D" uid="uid://c134wsyjnxyrd" path="res://assets/textures/villagers/ACNH_villager_icon_blue.png" id="22_yh4yk"]
 [ext_resource type="Texture2D" uid="uid://dyuft8ovthssd" path="res://assets/textures/villagers/ACNH_villager_icon_yellow.png" id="23_p8s74"]
+[ext_resource type="Texture2D" uid="uid://dkgo3ug2yfsn6" path="res://target_gradient.tres" id="24_euc68"]
 [ext_resource type="Texture2D" uid="uid://ktnmesc1r4df" path="res://assets/textures/villagers/ACNH_villager_icon_green.png" id="24_o4fqm"]
 [ext_resource type="Texture2D" uid="uid://bf7j3yeb5qbpc" path="res://assets/textures/villagers/ACNH_villager_icon_purple.png" id="25_gfmxp"]
+[ext_resource type="Texture2D" uid="uid://bcgc8hstvkiup" path="res://assets/textures/Treasure_Grid.png" id="25_jef5d"]
 [ext_resource type="Texture2D" uid="uid://dhukjack88tgf" path="res://assets/textures/villagers/ACNH_villager_icon_orange.png" id="26_1n88h"]
 [ext_resource type="Texture2D" uid="uid://cnogh8ry7g5ub" path="res://assets/textures/villagers/ACNH_villager_icon_light_blue.png" id="27_opjno"]
 [ext_resource type="Texture2D" uid="uid://dvoodakhoqndi" path="res://assets/textures/villagers/ACNH_villager_icon_pink.png" id="28_meb7l"]
-[ext_resource type="Script" uid="uid://dmmh3pfir5efa" path="res://scores.gd" id="28_uws2o"]
+[ext_resource type="Script" uid="uid://dmmh3pfir5efa" path="res://scripts/scores.gd" id="28_uws2o"]
 [ext_resource type="Texture2D" uid="uid://d175akf874gab" path="res://assets/textures/villagers/ACNH_villager_icon_black.png" id="29_w30ff"]
-[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/textures/FOT-Seurat Pro B.otf" id="30_ek5vw"]
+[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/FOT-Seurat Pro B.otf" id="30_ek5vw"]
 [ext_resource type="Texture2D" uid="uid://bm4ryb456eli" path="res://assets/textures/villagers/ACNH_villager_icon_light_green.png" id="32_p8s74"]
 [ext_resource type="Texture2D" uid="uid://8e1m3hqlwuf3" path="res://assets/textures/ui/Edit Icon.svg" id="39_iylel"]
 [ext_resource type="Texture2D" uid="uid://ijei3qtputcl" path="res://assets/textures/ui/SettingsGear.svg" id="39_uws2o"]
 [ext_resource type="Texture2D" uid="uid://dsix0xqeyvowy" path="res://assets/textures/ui/uiBtnFullscreen_shadowed.png" id="40_iylel"]
 [ext_resource type="Theme" uid="uid://cj6bpqlotdbwj" path="res://settings.tres" id="40_uws2o"]
 [ext_resource type="Script" uid="uid://bar86886dskg6" path="res://scripts/faw_handler.gd" id="43_jtbqm"]
+[ext_resource type="Script" uid="uid://c775lhp35bhhm" path="res://scripts/settings.gd" id="44_jip8q"]
+[ext_resource type="Texture2D" uid="uid://dwutb8y8p66tr" path="res://assets/textures/Treasure_Only_Grid.png" id="47_q1yuq"]
 
 [sub_resource type="Gradient" id="Gradient_h5hro"]
 offsets = PackedFloat32Array(0.006024096, 1)
@@ -90,10 +94,10 @@ RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
 RichTextLabel/constants/outline_size = 15
 
 [sub_resource type="Gradient" id="Gradient_opjno"]
-offsets = PackedFloat32Array(0, 0.14, 0.141, 0.46, 0.461, 0.74, 0.741, 0.990099, 1)
-colors = PackedColorArray(0, 1, 0, 1, 0.04950495, 1, 0.04950495, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0.9953708, 0.49561203, 1.1551381e-06, 1, 0.99607843, 0.49411765, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+offsets = PackedFloat32Array(0, 0.14, 0.142, 0.43373495, 0.43975905, 0.699, 0.7)
+colors = PackedColorArray(0, 1, 0, 1, 0.04950495, 1, 0.04950495, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0.9953708, 0.49561203, 1.1551381e-06, 1, 0.99607843, 0.49411765, 0, 1, 0.99607843, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jtbqm"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jef5d"]
 gradient = SubResource("Gradient_opjno")
 fill = 2
 fill_from = Vector2(0.5, 0.5)
@@ -249,7 +253,53 @@ corner_radius_bottom_left = 100
 
 [sub_resource type="Theme" id="Theme_o8r1j"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pec41"]
+
+[sub_resource type="Theme" id="Theme_o4blg"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_pec41")
+Button/styles/focus = SubResource("StyleBoxEmpty_pec41")
+Button/styles/hover = SubResource("StyleBoxEmpty_pec41")
+Button/styles/normal = SubResource("StyleBoxEmpty_pec41")
+Button/styles/pressed = SubResource("StyleBoxEmpty_pec41")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o4blg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4blg"]
+content_margin_bottom = 10.0
+bg_color = Color(0.98039216, 0.98039216, 0.9019608, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.85882354, 0.84313726, 0.45490196, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jip8q"]
+bg_color = Color(0.9178003, 0.91050524, 0.6225935, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.85882354, 0.84313726, 0.45490196, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_3uu20"]
+Button/colors/font_color = Color(0.23137255, 0.23137255, 0.23137255, 1)
+Button/colors/font_focus_color = Color(0.23137255, 0.23137255, 0.23137255, 1)
+Button/colors/font_hover_color = Color(0.38431373, 0.38431373, 0.38039216, 1)
+Button/colors/font_hover_pressed_color = Color(0.38431373, 0.38431373, 0.38039216, 1)
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("30_ek5vw")
+Button/styles/focus = SubResource("StyleBoxFlat_o4blg")
+Button/styles/hover = SubResource("StyleBoxFlat_o4blg")
+Button/styles/normal = SubResource("StyleBoxFlat_o4blg")
+Button/styles/pressed = SubResource("StyleBoxFlat_jip8q")
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_y1bqk"]
 
@@ -1602,7 +1652,7 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("16_m35m6")
 text = "How to Play"
 
-[node name="LoadCSVBtn" type="Button" parent="CanvasLayer/MainMenu/HBoxContainer" unique_id=1512149024]
+[node name="LoadCSVMainBtn" type="Button" parent="CanvasLayer/MainMenu/HBoxContainer" unique_id=1512149024]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1745,423 +1795,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 350
+theme_override_constants/margin_left = 415
 theme_override_constants/margin_top = 150
-theme_override_constants/margin_right = 350
+theme_override_constants/margin_right = 415
 theme_override_constants/margin_bottom = 150
 
 [node name="PointGradient" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer" unique_id=231555990]
 layout_mode = 2
-texture = SubResource("GradientTexture2D_jtbqm")
-
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer" unique_id=1417240854]
-layout_mode = 2
-columns = 7
-
-[node name="DigspotImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=211935883]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
+texture = SubResource("GradientTexture2D_jef5d")
 expand_mode = 1
-stretch_mode = 5
 
-[node name="DigspotImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=945361717]
+[node name="TreasureGrid" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer" unique_id=541321534]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage3" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=855895892]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage4" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2036951940]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage5" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=585203636]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage6" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2074937193]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage8" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=962044213]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage7" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1410369010]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=150017397]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage3" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=551300991]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage4" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2110268913]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage5" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=982776922]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1004955524]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage9" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1898014587]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage10" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=413448268]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage6" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1873576433]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1823814359]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage2" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2096475799]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage3" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1915970418]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage7" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1292098583]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage11" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1137887344]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage12" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2079831890]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage8" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=854916751]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage4" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=221671591]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TreasureImage" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=308122384]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("21_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage5" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1621441021]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage9" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=683873577]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage13" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1587811184]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage14" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=779339648]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage10" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1261539786]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage6" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1359939086]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage7" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=987283370]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellBagImage8" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1071635701]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("20_opjno")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage11" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2074314796]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage15" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1819415265]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage16" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1532297663]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage12" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1689286561]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage13" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1426100594]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage14" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=521966146]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage15" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1995398198]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="BellImage16" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=937797355]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("19_1n88h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage17" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=942895733]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage18" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=766446230]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage19" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=823040196]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage20" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1020814183]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage21" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1346765050]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage22" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=694382976]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage23" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=2146728529]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DigspotImage24" type="TextureRect" parent="CanvasLayer/HowToPlayMenu/HowToPlay2/MarginContainer/GridContainer" unique_id=1267244546]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("3_d5x1h")
+texture = ExtResource("25_jef5d")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HTPPoints" type="HBoxContainer" parent="CanvasLayer/HowToPlayMenu/HowToPlay2" unique_id=291247934]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -68.0
+offset_left = -59.0
 offset_top = -56.5
-offset_right = 417.0
+offset_right = 342.0
 offset_bottom = 56.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -2284,7 +1944,6 @@ script = ExtResource("20_84odl")
 
 [node name="UI" type="Control" parent="CanvasLayer" unique_id=1692367129]
 unique_name_in_owner = true
-visible = false
 z_index = 100
 layout_mode = 3
 anchors_preset = 15
@@ -2322,7 +1981,7 @@ texture_hover = ExtResource("21_j8kkg")
 texture_focused = ExtResource("21_j8kkg")
 stretch_mode = 5
 
-[node name="Team1Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1" unique_id=795621501]
+[node name="Team1Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1" unique_id=795621501 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2397,7 +2056,7 @@ texture_hover = ExtResource("22_yh4yk")
 texture_focused = ExtResource("22_yh4yk")
 stretch_mode = 5
 
-[node name="Team2Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2" unique_id=1672417986]
+[node name="Team2Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2" unique_id=1672417986 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2470,7 +2129,7 @@ theme = SubResource("Theme_uws2o")
 texture_normal = ExtResource("23_p8s74")
 stretch_mode = 5
 
-[node name="Team3Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3" unique_id=1926205075]
+[node name="Team3Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3" unique_id=1926205075 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2543,7 +2202,7 @@ theme = SubResource("Theme_uws2o")
 texture_normal = ExtResource("24_o4fqm")
 stretch_mode = 5
 
-[node name="Team4Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4" unique_id=617892208]
+[node name="Team4Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4" unique_id=617892208 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2616,7 +2275,7 @@ theme = SubResource("Theme_uws2o")
 texture_normal = ExtResource("25_gfmxp")
 stretch_mode = 5
 
-[node name="Team5Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L" unique_id=1502497204]
+[node name="Team5Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L" unique_id=1502497204 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2710,7 +2369,7 @@ theme = SubResource("Theme_uws2o")
 texture_normal = ExtResource("24_o4fqm")
 stretch_mode = 5
 
-[node name="Team4Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R" unique_id=725307293]
+[node name="Team4Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R" unique_id=725307293 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2785,7 +2444,7 @@ theme = SubResource("Theme_uws2o")
 texture_normal = ExtResource("25_gfmxp")
 stretch_mode = 5
 
-[node name="Team5Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R" unique_id=309167459]
+[node name="Team5Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R" unique_id=309167459 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -2862,7 +2521,7 @@ texture_hover = ExtResource("26_1n88h")
 texture_focused = ExtResource("26_1n88h")
 stretch_mode = 5
 
-[node name="Team6Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6" unique_id=575946585]
+[node name="Team6Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6" unique_id=575946585 groups=["Scores"]]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 4
@@ -2936,7 +2595,7 @@ texture_hover = ExtResource("27_opjno")
 texture_focused = ExtResource("27_opjno")
 stretch_mode = 5
 
-[node name="Team7Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7" unique_id=791669712]
+[node name="Team7Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7" unique_id=791669712 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -3011,7 +2670,7 @@ texture_hover = ExtResource("28_meb7l")
 texture_focused = ExtResource("28_meb7l")
 stretch_mode = 5
 
-[node name="Team8Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" unique_id=1736712978]
+[node name="Team8Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" unique_id=1736712978 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -3086,7 +2745,7 @@ texture_hover = ExtResource("32_p8s74")
 texture_focused = ExtResource("32_p8s74")
 stretch_mode = 5
 
-[node name="Team9Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" unique_id=208427448]
+[node name="Team9Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" unique_id=208427448 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -3161,7 +2820,7 @@ texture_hover = ExtResource("29_w30ff")
 texture_focused = ExtResource("29_w30ff")
 stretch_mode = 5
 
-[node name="Team10Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" unique_id=759898021]
+[node name="Team10Score" type="RichTextLabel" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" unique_id=759898021 groups=["Scores"]]
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
@@ -3286,18 +2945,26 @@ texture_normal = ExtResource("40_iylel")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="QuestionText" type="RichTextLabel" parent="CanvasLayer/UI" unique_id=500587712]
+[node name="Button" type="Button" parent="CanvasLayer/UI" unique_id=1896391131]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 22.0
+offset_right = 1565.0
+offset_bottom = 172.0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_o4blg")
+
+[node name="QuestionText" type="RichTextLabel" parent="CanvasLayer/UI/Button" unique_id=500587712]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 355.0
-offset_top = 22.0
-offset_right = -355.0
-offset_bottom = 173.0
+offset_right = -2.0
+offset_bottom = 151.0
 grow_horizontal = 2
+mouse_filter = 1
 theme = ExtResource("18_o4fqm")
-text = "Here is a question that I can't think of."
+text = "What color do you like？"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -3310,35 +2977,42 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -601.0
-offset_top = -347.0
+offset_top = -278.0
 offset_right = 601.0
-offset_bottom = 347.0
+offset_bottom = 278.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("40_uws2o")
+script = ExtResource("44_jip8q")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/SettingsMenu" unique_id=2110267552]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 95.0
+offset_top = 39.0
 offset_right = 1182.0
-offset_bottom = 674.0
+offset_bottom = 416.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer" unique_id=76416653]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer" unique_id=1560191837]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer" unique_id=1210115429]
+[node name="HBoxNumPlayers" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer" unique_id=76416653]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers" unique_id=1210115429]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.2
 theme = ExtResource("18_o4fqm")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o4blg")
-text = "# Players:"
+text = "# of Players:"
+vertical_alignment = 1
 
-[node name="NumPlayersSlider" type="HSlider" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer" unique_id=1041378399]
+[node name="NumPlayersSlider" type="HSlider" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers" unique_id=1041378399]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
@@ -3349,7 +3023,7 @@ value = 8.0
 tick_count = 7
 ticks_on_borders = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider" unique_id=390427916]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider" unique_id=390427916]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3362,7 +3036,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(912, -530)
 
-[node name="4" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=2092818578]
+[node name="4" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=2092818578]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3370,7 +3044,7 @@ text = "4"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="5" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=1273825443]
+[node name="5" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=1273825443]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3378,7 +3052,7 @@ text = "5"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="6" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=1306437653]
+[node name="6" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=1306437653]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3386,7 +3060,7 @@ text = "6"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="7" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=606126028]
+[node name="7" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=606126028]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3394,7 +3068,7 @@ text = "7"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="8" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=1711985465]
+[node name="8" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=1711985465]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3402,7 +3076,7 @@ text = "8"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="9" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=788441455]
+[node name="9" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=788441455]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3410,7 +3084,7 @@ text = "9"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="10" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider/HBoxContainer" unique_id=30073182]
+[node name="10" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider/HBoxContainer" unique_id=30073182]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("40_uws2o")
@@ -3418,15 +3092,83 @@ text = "10"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="OKButton" type="Button" parent="CanvasLayer/UI/SettingsMenu" unique_id=745422777]
-layout_mode = 0
-offset_left = 475.0
-offset_top = 539.0
-offset_right = 733.0
-offset_bottom = 627.0
+[node name="HBoxNumQs" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer" unique_id=259508592]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs" unique_id=475579024]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+theme = ExtResource("18_o4fqm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o4blg")
+text = "# of Questions:"
+vertical_alignment = 1
+
+[node name="NumQuestions" type="SpinBox" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs" unique_id=1224162868]
+layout_mode = 2
+size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("40_uws2o")
-text = "OK"
+min_value = 5.0
+max_value = 30.0
+value = 15.0
+rounded = true
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs" unique_id=1228246883]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 25
+
+[node name="ViewQuestionsBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs" unique_id=1914926275]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("16_m35m6")
+theme_override_fonts/font = ExtResource("30_ek5vw")
+theme_override_font_sizes/font_size = 40
+text = "View
+Questions"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu" unique_id=1475099308]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 435.0
+offset_right = 1084.0
+offset_bottom = 515.0
+theme_override_constants/separation = 50
+
+[node name="CancelBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=2093399390]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("16_m35m6")
+theme_override_fonts/font = ExtResource("30_ek5vw")
+theme_override_font_sizes/font_size = 50
+text = "Cancel"
+
+[node name="StartButton" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=745422777]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("40_uws2o")
+text = "Start"
+
+[node name="LoadCSVBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=1172702570]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("16_m35m6")
+theme_override_fonts/font = ExtResource("30_ek5vw")
+theme_override_font_sizes/font_size = 50
+text = "Load .csv"
 
 [node name="Questions" type="Panel" parent="CanvasLayer/UI/SettingsMenu" unique_id=410352390]
 unique_name_in_owner = true
@@ -3441,7 +3183,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("40_uws2o")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/SettingsMenu/Questions" unique_id=1130557887]
+[node name="QScroll" type="ScrollContainer" parent="CanvasLayer/UI/SettingsMenu/Questions" unique_id=1130557887]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3449,108 +3191,220 @@ anchor_bottom = 1.0
 offset_left = 56.0
 offset_top = 39.0
 offset_right = -56.0
-offset_bottom = -39.0
+offset_bottom = -115.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="QAGrid" type="GridContainer" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer" unique_id=1293179588]
+[node name="QAGrid" type="GridContainer" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll" unique_id=1293179588]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Question1" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=714485920]
+[node name="Question1" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1287414741 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "1."
 
-[node name="Question2" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=164019935]
+[node name="Question2" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1082930600 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "2."
 
-[node name="Question3" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1349751817]
+[node name="Question3" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1138394354 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "3."
 
-[node name="Question4" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=746340805]
+[node name="Question4" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1316087877 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "4."
 
-[node name="Question5" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1782288208]
+[node name="Question5" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1684252550 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "5."
 
-[node name="Question6" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=199665826]
+[node name="Question6" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=376049869 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "6."
 
-[node name="Question7" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1211816320]
+[node name="Question7" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1138851545 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "7."
 
-[node name="Question8" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=1023464544]
+[node name="Question8" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1253765526 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "8."
 
-[node name="Question9" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=80969861]
+[node name="Question9" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=711835324 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "9."
 
-[node name="Question10" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/Questions/ScrollContainer/QAGrid" unique_id=533161391]
+[node name="Question10" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=249985593 groups=["QuestionBox"]]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("18_o4fqm")
-vertical_alignment = 1
+placeholder_text = "10."
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu" unique_id=1475099308]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 388.0
-offset_right = 1082.0
-offset_bottom = 499.0
+[node name="Question11" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1764698634 groups=["QuestionBox"]]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+placeholder_text = "11."
+
+[node name="Question12" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=259509684 groups=["QuestionBox"]]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+placeholder_text = "12."
+
+[node name="Question13" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=2116886040 groups=["QuestionBox"]]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+placeholder_text = "13."
+
+[node name="Question14" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1977335903 groups=["QuestionBox"]]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+placeholder_text = "14."
+
+[node name="Question15" type="LineEdit" parent="CanvasLayer/UI/SettingsMenu/Questions/QScroll/QAGrid" unique_id=1213213982 groups=["QuestionBox"]]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+placeholder_text = "15."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/Questions" unique_id=1228579525]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 101.0
+offset_top = -104.0
+offset_right = -101.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_constants/separation = 50
 
-[node name="ViewQuestions" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=1172702570]
+[node name="CancelBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/Questions/HBoxContainer" unique_id=1885172385]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 theme = ExtResource("16_m35m6")
 theme_override_fonts/font = ExtResource("30_ek5vw")
 theme_override_font_sizes/font_size = 50
-text = "Load .csv"
+text = "Cancel"
 
-[node name="ViewQuestions2" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=1914926275]
+[node name="OKBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/Questions/HBoxContainer" unique_id=831603316]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("40_uws2o")
+text = "OK"
+
+[node name="QABtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/Questions/HBoxContainer" unique_id=123346282]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 theme = ExtResource("16_m35m6")
 theme_override_fonts/font = ExtResource("30_ek5vw")
 theme_override_font_sizes/font_size = 50
-text = "View Questions"
+text = "Answers"
+
+[node name="AddBoxesBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/Questions" unique_id=178148946]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -146.0
+offset_top = -103.0
+offset_right = -58.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_3uu20")
+theme_override_font_sizes/font_size = 60
+text = "+"
+
+[node name="TreasureGridBtn" type="TextureButton" parent="CanvasLayer/UI" unique_id=1661224146]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -69.0
+offset_right = 69.0
+offset_bottom = -5.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("24_euc68")
+
+[node name="TreasureGridPopup" type="TextureRect" parent="CanvasLayer/UI/TreasureGridBtn" unique_id=379526245]
+unique_name_in_owner = true
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -544.0
+offset_right = 547.0
+offset_bottom = 1.0
+grow_vertical = 0
+texture = ExtResource("47_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PointGradient" type="TextureRect" parent="CanvasLayer/UI/TreasureGridBtn/TreasureGridPopup" unique_id=25761488]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_euc68")
+expand_mode = 1
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=304837307]
 unique_name_in_owner = true
@@ -3560,6 +3414,9 @@ stream = SubResource("AudioStreamPolyphonic_y1bqk")
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("43_jtbqm")
+
+[node name="FadeTween" type="Node" parent="." unique_id=2137556424]
+unique_name_in_owner = true
 
 [connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot1" to="." method="_dig" flags=18]
 [connection signal="pressed" from="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot2" to="." method="_dig" flags=18]
@@ -3620,8 +3477,16 @@ script = ExtResource("43_jtbqm")
 [connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8/Team8Score" method="_add_points"]
 [connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9/Team9Score" method="_add_points"]
 [connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score" method="_add_points"]
-[connection signal="pressed" from="CanvasLayer/UI/SettingsBtn" to="." method="_open_settings_menu"]
-[connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/HBoxContainer/NumPlayersSlider" to="." method="_update_num_teams"]
-[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/OKButton" to="." method="_close_settings_menu"]
-[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/ViewQuestions" to="." method="_show_questions"]
-[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/ViewQuestions2" to="." method="_show_questions"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsBtn" to="CanvasLayer/UI/SettingsMenu" method="_open_settings_menu"]
+[connection signal="pressed" from="CanvasLayer/UI/Button" to="." method="_switch_question_answer"]
+[connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider" to="." method="_update_num_teams"]
+[connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/NumQuestions" to="CanvasLayer/UI/SettingsMenu" method="_change_num_questions"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/ViewQuestionsBtn" to="CanvasLayer/UI/SettingsMenu" method="_show_questions"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/CancelBtn" to="CanvasLayer/UI/SettingsMenu" method="_close_settings_menu"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/StartButton" to="CanvasLayer/UI/SettingsMenu" method="_restart"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/LoadCSVBtn" to="." method="_show_questions"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/Questions/HBoxContainer/CancelBtn" to="CanvasLayer/UI/SettingsMenu" method="_cancel_question_updates"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/Questions/HBoxContainer/OKBtn" to="CanvasLayer/UI/SettingsMenu" method="_confirm_question_updates"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/Questions/HBoxContainer/QABtn" to="CanvasLayer/UI/SettingsMenu" method="_toggle_questions_answers"]
+[connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/Questions/AddBoxesBtn" to="CanvasLayer/UI/SettingsMenu" method="_add_question_boxes"]
+[connection signal="toggled" from="CanvasLayer/UI/TreasureGridBtn" to="." method="_toggle_treasure_grid"]

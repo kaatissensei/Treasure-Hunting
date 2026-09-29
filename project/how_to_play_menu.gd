@@ -2,6 +2,8 @@ extends TextureRect
 
 var h2p_current_page : int = 1
 
+signal start_game
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -26,6 +28,7 @@ func _h2p_next() -> void:
 				page.visible = true
 			%HTPPoints.visible = false
 			%HowToPlayMenu.visible = false
+			emit_signal("start_game")
 	h2p_current_page += 1
 
 

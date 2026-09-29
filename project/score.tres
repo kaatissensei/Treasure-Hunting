@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://g2bngjdwtasr"]
 
-[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/textures/FOT-Seurat Pro B.otf" id="1_p2k1x"]
+[ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/FOT-Seurat Pro B.otf" id="1_p2k1x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2k1x"]
 bg_color = Color(0.9019608, 0, 0, 1)

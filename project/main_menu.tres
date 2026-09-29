@@ -16,13 +16,14 @@ corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m86qt"]
-content_margin_top = 20.0
+content_margin_top = 10.0
 bg_color = Color(0.98039216, 0.98039216, 0.9019608, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
 border_color = Color(0.857913, 0.8448908, 0.45452416, 1)
+border_blend = true
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
