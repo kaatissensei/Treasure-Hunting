@@ -40,9 +40,13 @@ func _close_settings_menu() -> void:
 func _restart() -> void:
 	set_current_question.emit(1)
 	%SettingsMenu.visible = false
+	%FinishScreen.visible = false
+	%Shine.visible = false
 	%DigSpotContainer.setup()
+	%QuestionText.visible = Main.questions[0] != ""
 	for score_box in get_tree().get_nodes_in_group("Scores"):
 		score_box.set_current_score(0)
+		score_box.get_parent().get_node("WinnerHat").visible = false
 
 func _show_questions() -> void:
 	for i in range(Main.num_questions):

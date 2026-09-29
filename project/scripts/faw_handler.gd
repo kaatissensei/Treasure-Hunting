@@ -89,7 +89,8 @@ func _on_file_loaded(_file_name: String, _type: String, base64_data: String) -> 
 		parse_csv()
 		load_question_menu()
 		
-		%QuestionText.text = "1. " + Main.questions[0]
+		%QuestionText.text = "1. %s" % Main.questions[0]
+		%QuestionText.visible = true
 		#%DEBUG.text = Main.csvArray
 	else:
 		%DEBUG.text = "Can't find file."
