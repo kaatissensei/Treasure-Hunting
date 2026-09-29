@@ -26,8 +26,7 @@ func _ready() -> void:
 	kappn_start_pos = %Kappn.position
 	%AudioPlayer.play()
 	playback = %AudioPlayer.get_stream_playback()
-	%HowToPlayMenu.start_game.connect(_start_game)
-	%SettingsMenu.show_new_question.connect(show_new_question)
+	connect_signals()
 	var team5Icon : Control
 	if Main.num_teams > 8:
 		team5Icon = %TeamIcon5L
@@ -49,7 +48,10 @@ func _ready() -> void:
 	
 	_update_num_teams()
 	
-
+func connect_signals():
+	%HowToPlayMenu.start_game.connect(_start_game)
+	%SettingsMenu.show_new_question.connect(show_new_question)
+	%SettingsMenu.set_current_question.connect(set_current_question)
 
 func _update_num_teams(new_num_teams : int = 8):
 	Main.num_teams = new_num_teams
@@ -125,6 +127,10 @@ func _start_game() -> void:
 	playback.play_stream(preload("res://assets/sounds/UI_Decide_Title.wav"), 0, 0, randf_range(0.9, 1.1))
 	%QuestionText.visible = Main.questions.size() > 0
 
+func set_current_question(new_q_num : int):
+	Main.current_question = new_q_num
+	show_new_question()
+
 func show_new_question() -> void:
 	var current_q = Main.questions[Main.current_question - 1]
 	if (current_q != ""):
@@ -192,3 +198,9 @@ func _switch_question_answer() -> void:
 
 func _close_settings() -> void:
 	pass # Replace with function body.
+
+
+func _toggle_fullscreen() -> void:
+	var mode := DisplayServer.window_get_mode()
+	var is_window: bool = mode != DisplayServer.WINDOW_MODE_FULLSCREEN
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if is_window else DisplayServer.WINDOW_MODE_WINDOWED)

@@ -5,6 +5,7 @@ var showing_questions = true
 var QBOX_THEME = preload("res://dialog.tres")
 
 signal show_new_question
+signal set_current_question(new_num : int)
 
 func _ready() -> void:
 	pass # Replace with function body.
@@ -37,6 +38,7 @@ func _close_settings_menu() -> void:
 	%SettingsMenu.visible = false
 
 func _restart() -> void:
+	set_current_question.emit(1)
 	%SettingsMenu.visible = false
 	%DigSpotContainer.setup()
 	for score_box in get_tree().get_nodes_in_group("Scores"):

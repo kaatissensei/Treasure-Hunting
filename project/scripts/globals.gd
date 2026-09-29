@@ -113,8 +113,3 @@ func get_team_color(team_num : int):
 
 func clear_questions():
 	questions.clear()
-
-func fullscreen():
-	var mode := DisplayServer.window_get_mode()
-	var is_window: bool = mode != DisplayServer.WINDOW_MODE_FULLSCREEN
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if is_window else DisplayServer.WINDOW_MODE_WINDOWED)
