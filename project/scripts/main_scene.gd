@@ -15,6 +15,7 @@ var playback
 
 var shine : Control
 var kappn_start_pos : Vector2
+var main_showing_question : bool = true
 
 var scores : Array[int]
 var team_map
@@ -25,7 +26,8 @@ func _ready() -> void:
 	kappn_start_pos = %Kappn.position
 	%AudioPlayer.play()
 	playback = %AudioPlayer.get_stream_playback()
-	
+	%HowToPlayMenu.start_game.connect(_start_game)
+	%SettingsMenu.show_new_question.connect(show_new_question)
 	var team5Icon : Control
 	if Main.num_teams > 8:
 		team5Icon = %TeamIcon5L
@@ -121,7 +123,14 @@ func _start_game() -> void:
 	%MainMenu.visible = false
 	%UI.visible = true
 	playback.play_stream(preload("res://assets/sounds/UI_Decide_Title.wav"), 0, 0, randf_range(0.9, 1.1))
+	%QuestionText.visible = Main.questions.size() > 0
 
+func show_new_question() -> void:
+	var current_q = Main.questions[Main.current_question - 1]
+	if (current_q != ""):
+		%QuestionText.text = "%d. %s" % [Main.current_question, current_q]
+	else:
+		%QuestionText.visible = false
 
 func _next_sentence() -> void:
 	if Main.treasure_found:
@@ -133,7 +142,9 @@ func _next_sentence() -> void:
 		#Reset island for next sentence
 		%DigSpotContainer.setup()
 		shine.visible = false
-		
+		if (Main.current_question < Main.num_questions):
+			Main.current_question += 1
+			show_new_question()
 		#Load next sentence
 		
 
@@ -143,6 +154,7 @@ func move_kappn() -> void:
 	tween.set_parallel()
 	tween.tween_property(%Kappn, "rotation_degrees", -7.0, 0.1)
 	tween.tween_property(%Kappn, "position:x", 1800, 0.4)
+	tween.tween_property(%AudioPlayer, "volume_db", 0, 2.4)
 	#tween.tween_property(%Kappn, "position:x", 1350, 0.05)
 	await get_tree().create_timer(0.4).timeout
 	tween.kill()
@@ -151,23 +163,32 @@ func move_kappn() -> void:
 
 
 func speed_wipe() -> void:
-	playback.play_stream(preload("res://assets/sounds/Obj_Boat_Run.wav"), 0, 0, randf_range(0.9, 1.1))
+	playback.play_stream(preload("res://assets/sounds/boat_run_short.wav"), 0, 0, randf_range(0.9, 1.1))
 	%Speed.visible = true
 	var tween = create_tween()
+	#tween.parallel()
 	tween.tween_property(%KappnSpeed, "position:x", 2000.0, 2) #2k
+	
 	await get_tree().create_timer(2).timeout #2
 	%KappnSpeed.position.x = -400.0
 	%Speed.visible = false
 	Main.points_to_add = 0
-	playback.stop()
+	playback.play_stream(preload("res://assets/sounds/Obj_Boat_Land_01.wav"), 0, 0, 1)
+	
+	#fade_tween.interpolate_property(playback, "volume_db", 0, -80, transition_duration, transition_type, Tween.EASE_IN, 0)
+	#fade_tween.start()
 
-func _open_settings_menu() -> void:
-	%SettingsMenu.visible = true
+func _toggle_treasure_grid(toggled_on: bool) -> void:
+	%TreasureGridPopup.visible = toggled_on
+
+#Changes main QuestionText dialog to show the answer or question
+func _switch_question_answer() -> void:
+	main_showing_question = !main_showing_question
+	if (main_showing_question):
+		%QuestionText.text = Main.questions[Main.current_question-1]
+	else:
+		%QuestionText.text = Main.answers[Main.current_question-1]
 
 
-func _close_settings_menu() -> void:
-	%SettingsMenu.visible = false
-
-
-func _show_questions() -> void:
-	%Questions.visible = true
+func _close_settings() -> void:
+	pass # Replace with function body.

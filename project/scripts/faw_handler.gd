@@ -2,14 +2,14 @@ extends Control
 
 
 @onready var upload_button: Button = %"LoadCSVBtn" as Button
-#@onready var main_upload_btn: Button = %"UploadCSV" as Button
+@onready var main_upload_btn: Button = %"LoadCSVMainBtn" as Button
 var csvFile
 var csvArray = []
 
 func _ready() -> void:
 	## file_access_web functions won't work if you don't connect them!
 	upload_button.pressed.connect(_on_upload_pressed)
-	#main_upload_btn.pressed.connect(_on_upload_pressed)
+	main_upload_btn.pressed.connect(_on_upload_pressed)
 	#file_access_web.load_started.connect(_on_file_load_started)
 	file_access_web.loaded.connect(_on_file_loaded)
 	#file_access_web.progress.connect(_on_progress)
@@ -19,8 +19,8 @@ func _ready() -> void:
 func load_question_menu():
 	print(str(Main.questions.size()))
 	for i in range(Main.questions.size()):
-		%Questions/ScrollContainer/QAGrid.get_child(i).text = Main.questions[i]
-		print(%Questions/ScrollContainer/QAGrid.get_child(i).name)
+		%Questions/QScroll/QAGrid.get_child(i).text = Main.questions[i]
+		#print(%Questions/QScroll/QAGrid.get_child(i).name)
 		#if Main.answers[i] != 0:
 		#%Questions/QAGrid.get_child(i).text = Main.answers[i]
 
@@ -89,7 +89,7 @@ func _on_file_loaded(_file_name: String, _type: String, base64_data: String) -> 
 		parse_csv()
 		load_question_menu()
 		
-		%QuestionText.text = "Q1: " + Main.questions[0]
+		%QuestionText.text = "1. " + Main.questions[0]
 		#%DEBUG.text = Main.csvArray
 	else:
 		%DEBUG.text = "Can't find file."

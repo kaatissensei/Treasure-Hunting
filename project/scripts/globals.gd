@@ -14,8 +14,10 @@ var last_treasure_coord : Array[int] = [0,0]
 
 var points_to_add : int
 
+var num_questions : int = 15
 var questions : Array[String]
 var answers : Array[String]
+var current_question : int = 1
 
 var hex_Gray : String = "#737373" #was Color.DIM_GRAY
 var hex_Red : String = "#E60000"
@@ -38,6 +40,24 @@ Color.html(hex_LBlue), Color.html(hex_Pink), Color.html(hex_LGreen), Color.html(
 func _ready() -> void:
 	num_cols = 7
 	num_rows = 5
+	reset_question_array()
+
+func reset_question_array():
+	questions.clear()
+	answers.clear()
+	questions.resize(num_questions)
+	answers.resize(num_questions)
+
+func add_question():
+	num_questions += 1
+	questions.push_back("")
+	answers.push_back("")
+
+func remove_question():
+	num_questions -= 1
+	questions.pop_back()
+	answers.pop_back()
+	
 
 func _get_coords(dig_spot_int : int) -> Array[int]:
 	#[r,c]
@@ -90,6 +110,9 @@ func get_gold(dig_row: int, dig_col: int) -> int:
 		
 func get_team_color(team_num : int):
 	return COLORS[team_num]
+
+func clear_questions():
+	questions.clear()
 
 func fullscreen():
 	var mode := DisplayServer.window_get_mode()
