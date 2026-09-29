@@ -40,7 +40,7 @@ func _subtract_points(pts_to_sub : int): #For now, only used with -1 button
 	text = str(current_score)
 
 func set_current_score(new_score : int):
-	current_score = 0
+	current_score = new_score
 	text = str(current_score)
 
 func _show_buttons():

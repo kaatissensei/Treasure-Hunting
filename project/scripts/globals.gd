@@ -113,3 +113,7 @@ func get_team_color(team_num : int):
 
 func clear_questions():
 	questions.clear()
+
+	
+	
+	

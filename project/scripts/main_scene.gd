@@ -107,7 +107,10 @@ func show_treasure(pts: int, btn: TextureButton):
 			shine.reparent(btn, false)
 			shine.visible = true
 			%Kappn.texture_normal = KAPPNFACE
-			%Kappn/NextDialog.visible = true
+			if (Main.current_question < Main.num_questions):
+				%Kappn/NextDialog.visible = true
+			else:
+				calculate_winner()
 		3:
 			treasure_sprite = TRIP_BELLS
 			sound = TRIP_WAV
@@ -125,13 +128,14 @@ func _start_game() -> void:
 	%MainMenu.visible = false
 	%UI.visible = true
 	playback.play_stream(preload("res://assets/sounds/UI_Decide_Title.wav"), 0, 0, randf_range(0.9, 1.1))
-	%QuestionText.visible = Main.questions.size() > 0
+	%QuestionText.visible = Main.questions[0] != ""
 
 func set_current_question(new_q_num : int):
 	Main.current_question = new_q_num
 	show_new_question()
 
 func show_new_question() -> void:
+	main_showing_question = true
 	var current_q = Main.questions[Main.current_question - 1]
 	if (current_q != ""):
 		%QuestionText.text = "%d. %s" % [Main.current_question, current_q]
@@ -139,7 +143,7 @@ func show_new_question() -> void:
 		%QuestionText.visible = false
 
 func _next_sentence() -> void:
-	if Main.treasure_found:
+	if Main.treasure_found && (Main.current_question < Main.num_questions):
 		#Move Kappn to the right
 		move_kappn()
 		await get_tree().create_timer(0.4).timeout
@@ -152,6 +156,9 @@ func _next_sentence() -> void:
 			Main.current_question += 1
 			show_new_question()
 		#Load next sentence
+	elif Main.treasure_found: #last
+		##Finish
+		pass
 		
 
 func move_kappn() -> void:
@@ -191,14 +198,35 @@ func _toggle_treasure_grid(toggled_on: bool) -> void:
 func _switch_question_answer() -> void:
 	main_showing_question = !main_showing_question
 	if (main_showing_question):
-		%QuestionText.text = Main.questions[Main.current_question-1]
+		%QuestionText.text = "%d. %s" % [Main.current_question, Main.questions[Main.current_question-1]]
 	else:
-		%QuestionText.text = Main.answers[Main.current_question-1]
+		%QuestionText.text = "%d. %s" % [Main.current_question, Main.answers[Main.current_question-1]]
 
 
 func _close_settings() -> void:
 	pass # Replace with function body.
 
+func calculate_winner():
+	%FinishScreen.visible = true
+	var scores_array : Array[int]
+	var winners_array : Array[int]
+	var high_score
+	var num_teams = Main.num_teams
+	#Make array of all scores
+	for i in range(num_teams):
+		var score_text = team_map[i+1].get_child(0).text
+		scores_array.push_back(int(score_text))
+	high_score = scores_array.max()
+	#Check which teams have high score
+	for i in range(num_teams):
+		if scores_array[i] == high_score:
+			winners_array.push_back(i+1) #No 0 team
+			print("%d wins!" % i)
+	
+	
+	#Show hats
+	for winner in winners_array:
+		team_map[winner].get_node("WinnerHat").visible = true
 
 func _toggle_fullscreen() -> void:
 	var mode := DisplayServer.window_get_mode()
