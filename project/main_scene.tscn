@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://d175akf874gab" path="res://assets/textures/villagers/ACNH_villager_icon_black.png" id="29_w30ff"]
 [ext_resource type="FontFile" uid="uid://ceed5ywqosmvr" path="res://assets/FOT-Seurat Pro B.otf" id="30_ek5vw"]
 [ext_resource type="Texture2D" uid="uid://bm4ryb456eli" path="res://assets/textures/villagers/ACNH_villager_icon_light_green.png" id="32_p8s74"]
+[ext_resource type="Texture2D" uid="uid://beye110g25vw1" path="res://assets/textures/ACNH_Pirate_Hat.png" id="32_q1yuq"]
 [ext_resource type="Texture2D" uid="uid://8e1m3hqlwuf3" path="res://assets/textures/ui/Edit Icon.svg" id="39_iylel"]
 [ext_resource type="Texture2D" uid="uid://ijei3qtputcl" path="res://assets/textures/ui/SettingsGear.svg" id="39_uws2o"]
 [ext_resource type="Texture2D" uid="uid://dsix0xqeyvowy" path="res://assets/textures/ui/uiBtnFullscreen_shadowed.png" id="40_iylel"]
@@ -48,6 +49,7 @@
 [ext_resource type="Script" uid="uid://bar86886dskg6" path="res://scripts/faw_handler.gd" id="43_jtbqm"]
 [ext_resource type="Script" uid="uid://c775lhp35bhhm" path="res://scripts/settings.gd" id="44_jip8q"]
 [ext_resource type="Texture2D" uid="uid://dwutb8y8p66tr" path="res://assets/textures/Treasure_Only_Grid.png" id="47_q1yuq"]
+[ext_resource type="PackedScene" uid="uid://ydcv4hoha43a" path="res://pirate_king.tscn" id="49_uacds"]
 
 [sub_resource type="Gradient" id="Gradient_h5hro"]
 offsets = PackedFloat32Array(0.006024096, 1)
@@ -300,6 +302,13 @@ Button/styles/focus = SubResource("StyleBoxFlat_o4blg")
 Button/styles/hover = SubResource("StyleBoxFlat_o4blg")
 Button/styles/normal = SubResource("StyleBoxFlat_o4blg")
 Button/styles/pressed = SubResource("StyleBoxFlat_jip8q")
+
+[sub_resource type="Theme" id="Theme_pec41"]
+RichTextLabel/colors/default_color = Color(1, 0.81960785, 0.27450982, 1)
+RichTextLabel/colors/font_outline_color = Color(0.56680995, 0.44641894, 4.813075e-07, 1)
+RichTextLabel/constants/outline_size = 50
+RichTextLabel/font_sizes/normal_font_size = 300
+RichTextLabel/fonts/normal_font = ExtResource("13_42l1d")
 
 [sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_y1bqk"]
 
@@ -1581,7 +1590,6 @@ vertical_alignment = 1
 
 [node name="MainMenu" type="TextureRect" parent="CanvasLayer" unique_id=677285629]
 unique_name_in_owner = true
-visible = false
 z_index = 150
 anchors_preset = 15
 anchor_right = 1.0
@@ -1814,6 +1822,7 @@ stretch_mode = 5
 
 [node name="HTPPoints" type="HBoxContainer" parent="CanvasLayer/HowToPlayMenu/HowToPlay2" unique_id=291247934]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1945,6 +1954,7 @@ script = ExtResource("20_84odl")
 
 [node name="UI" type="Control" parent="CanvasLayer" unique_id=1692367129]
 unique_name_in_owner = true
+visible = false
 z_index = 100
 layout_mode = 3
 anchors_preset = 15
@@ -2045,6 +2055,21 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon1" unique_id=749402308]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="TeamIcon2" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=529420434]
 unique_name_in_owner = true
 layout_mode = 2
@@ -2121,6 +2146,23 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon2" unique_id=460948740]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -42.0
+offset_right = -6.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="TeamIcon3" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=1288298464]
 unique_name_in_owner = true
 layout_mode = 2
@@ -2192,6 +2234,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon3" unique_id=1307860694]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="TeamIcon4" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=1908665471]
@@ -2267,6 +2324,23 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon4" unique_id=1818614148]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -78.0
+offset_right = 11.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="TeamIcon5L" type="TextureButton" parent="CanvasLayer/UI/ScoresLMargin/ScoresL" unique_id=1771652447]
 unique_name_in_owner = true
 layout_mode = 2
@@ -2338,6 +2412,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresLMargin/ScoresL/TeamIcon5L" unique_id=157236741]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -37.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="ScoresRMargin" type="MarginContainer" parent="CanvasLayer/UI" unique_id=801087421]
@@ -2435,9 +2524,25 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon4R" unique_id=2093161136 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -70.0
+offset_right = 10.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="TeamIcon5R" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=1754974800]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
@@ -2508,6 +2613,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon5R" unique_id=50231638 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -29.0
+offset_right = -1.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="TeamIcon6" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=1117755728]
@@ -2582,6 +2704,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon6" unique_id=733215269 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -44.0
+offset_right = -2.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="TeamIcon7" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=299036030]
@@ -2659,6 +2798,23 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon7" unique_id=1472341531 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -70.0
+offset_right = 1.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="TeamIcon8" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=2054777224]
 unique_name_in_owner = true
 layout_mode = 2
@@ -2732,6 +2888,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
+stretch_mode = 5
+
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon8" unique_id=1823440497 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -46.0
+offset_right = 1.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="TeamIcon9" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=2028670877]
@@ -2809,6 +2982,23 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" unique_id=734968041 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -50.0
+offset_right = -1.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="TeamIcon10" type="TextureButton" parent="CanvasLayer/UI/ScoresRMargin/ScoresR" unique_id=889494399]
 unique_name_in_owner = true
 layout_mode = 2
@@ -2884,6 +3074,21 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_h5hro")
 stretch_mode = 5
 
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" unique_id=268531071 groups=["WinnerHats"]]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -60)
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="SettingsBtn" type="TextureButton" parent="CanvasLayer/UI" unique_id=395011621]
 layout_mode = 0
 offset_right = 80.0
@@ -2946,7 +3151,7 @@ texture_normal = ExtResource("40_iylel")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="CanvasLayer/UI" unique_id=1896391131]
+[node name="QuestionTextBtn" type="Button" parent="CanvasLayer/UI" unique_id=1896391131]
 layout_mode = 0
 offset_left = 355.0
 offset_top = 22.0
@@ -2955,8 +3160,9 @@ offset_bottom = 172.0
 mouse_default_cursor_shape = 2
 theme = SubResource("Theme_o4blg")
 
-[node name="QuestionText" type="RichTextLabel" parent="CanvasLayer/UI/Button" unique_id=500587712]
+[node name="QuestionText" type="RichTextLabel" parent="CanvasLayer/UI/QuestionTextBtn" unique_id=500587712]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -3407,6 +3613,61 @@ grow_vertical = 2
 texture = ExtResource("24_euc68")
 expand_mode = 1
 
+[node name="FinishScreen" type="Control" parent="CanvasLayer/UI" unique_id=2008363448]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PirateKing" parent="CanvasLayer/UI/FinishScreen" unique_id=1660833835 instance=ExtResource("49_uacds")]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -168.0
+offset_top = -448.0
+offset_right = 21.0
+offset_bottom = -167.0
+grow_vertical = 0
+scale = Vector2(2.5, 2.5)
+
+[node name="FinishText" type="RichTextLabel" parent="CanvasLayer/UI/FinishScreen" unique_id=2052602656]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -581.0
+offset_top = -271.0
+offset_right = 581.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_pec41")
+text = "Finished!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinnerHat" type="TextureRect" parent="CanvasLayer/UI/FinishScreen" unique_id=1437251653]
+visible = false
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 179.0
+offset_bottom = 197.0
+texture = ExtResource("32_q1yuq")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=304837307]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamPolyphonic_y1bqk")
@@ -3480,7 +3741,7 @@ unique_name_in_owner = true
 [connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score" method="_add_points"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsBtn" to="CanvasLayer/UI/SettingsMenu" method="_open_settings_menu"]
 [connection signal="pressed" from="CanvasLayer/UI/FullScreenBtn" to="." method="_toggle_fullscreen"]
-[connection signal="pressed" from="CanvasLayer/UI/Button" to="." method="_switch_question_answer"]
+[connection signal="pressed" from="CanvasLayer/UI/QuestionTextBtn" to="." method="_switch_question_answer"]
 [connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider" to="." method="_update_num_teams"]
 [connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/NumQuestions" to="CanvasLayer/UI/SettingsMenu" method="_change_num_questions"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/ViewQuestionsBtn" to="CanvasLayer/UI/SettingsMenu" method="_show_questions"]

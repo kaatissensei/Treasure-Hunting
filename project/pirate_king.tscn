@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ydcv4hoha43a"]
+
+[ext_resource type="Texture2D" uid="uid://ra1todhmg2sh" path="res://assets/textures/ACNH_Pirate_Treasure_Robed.png" id="1_lcdwy"]
+[ext_resource type="Texture2D" uid="uid://d0he8tob0ao78" path="res://assets/textures/villagers/ACNH_villager_icon_red.png" id="2_4huw5"]
+[ext_resource type="Texture2D" uid="uid://beye110g25vw1" path="res://assets/textures/ACNH_Pirate_Hat.png" id="3_q5wrh"]
+
+[node name="PirateKing" type="Control" unique_id=1660833835]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1878.0
+offset_bottom = -988.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Coat" type="TextureRect" parent="." unique_id=999474669]
+layout_mode = 0
+offset_top = 117.0
+offset_right = 100.0
+offset_bottom = 217.0
+texture = ExtResource("1_lcdwy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Head" type="TextureRect" parent="." unique_id=754378142]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 43.0
+offset_right = 100.0
+offset_bottom = 143.0
+texture = ExtResource("2_4huw5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hat" type="TextureRect" parent="." unique_id=1280965503]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("3_q5wrh")
+expand_mode = 1
+stretch_mode = 5
