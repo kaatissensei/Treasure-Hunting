@@ -1581,6 +1581,7 @@ vertical_alignment = 1
 
 [node name="MainMenu" type="TextureRect" parent="CanvasLayer" unique_id=677285629]
 unique_name_in_owner = true
+visible = false
 z_index = 150
 anchors_preset = 15
 anchor_right = 1.0
@@ -3478,6 +3479,7 @@ unique_name_in_owner = true
 [connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon9/Team9Score" method="_add_points"]
 [connection signal="pressed" from="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10" to="CanvasLayer/UI/ScoresRMargin/ScoresR/TeamIcon10/Team10Score" method="_add_points"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsBtn" to="CanvasLayer/UI/SettingsMenu" method="_open_settings_menu"]
+[connection signal="pressed" from="CanvasLayer/UI/FullScreenBtn" to="." method="_toggle_fullscreen"]
 [connection signal="pressed" from="CanvasLayer/UI/Button" to="." method="_switch_question_answer"]
 [connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider" to="." method="_update_num_teams"]
 [connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/NumQuestions" to="CanvasLayer/UI/SettingsMenu" method="_change_num_questions"]
