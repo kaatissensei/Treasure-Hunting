@@ -13,6 +13,8 @@ var treasure_coord : Array[int] = [0,0]
 var last_treasure_coord : Array[int] = [0,0]
 
 var points_to_add : int
+var give_bonus_point : bool = true
+var is_first_team : bool = true
 
 var num_questions : int = 15
 var questions : Array[String]

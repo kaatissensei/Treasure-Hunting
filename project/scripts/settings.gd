@@ -44,6 +44,7 @@ func _restart() -> void:
 	%Shine.visible = false
 	%DigSpotContainer.setup()
 	%QuestionText.visible = Main.questions[0] != ""
+	Main.is_first_team = true
 	for score_box in get_tree().get_nodes_in_group("Scores"):
 		score_box.set_current_score(0)
 		score_box.get_parent().get_node("WinnerHat").visible = false
@@ -83,3 +84,13 @@ func _toggle_questions_answers() -> void:
 		%QABtn.text = "Questions"
 		for i in range(Main.num_questions):
 			%Questions/QScroll/QAGrid.get_child(i).text = Main.answers[i]
+
+
+func _toggle_bonus_point(toggled_off: bool) -> void:
+	Main.give_bonus_point = !toggled_off
+	if toggled_off:
+		%BonusPtToggle.text = "Off"
+	else:
+		%BonusPtToggle.text = "On"
+	
+	print("Bonus point is %s" % Main.give_bonus_point)

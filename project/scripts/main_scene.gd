@@ -152,6 +152,7 @@ func _next_sentence() -> void:
 		#Reset island for next sentence
 		%DigSpotContainer.setup()
 		shine.visible = false
+		Main.is_first_team = true
 		if (Main.current_question < Main.num_questions):
 			Main.current_question += 1
 			show_new_question()

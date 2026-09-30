@@ -31,6 +31,11 @@ func _ready() -> void:
 	btn_pts_dwn.add_theme_stylebox_override("pressed", new_stylebox)
 
 func _add_points(pts_to_add : int = Main.points_to_add):
+	if (Main.is_first_team && Main.give_bonus_point):
+		pts_to_add += 1
+		Main.is_first_team = false
+	elif (Main.is_first_team):
+		print("First")
 	current_score += pts_to_add
 	text = str(current_score)
 
