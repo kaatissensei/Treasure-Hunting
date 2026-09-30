@@ -111,6 +111,10 @@ func parse_csv():
 		#Assign variables here
 		Main.questions.push_back(arr[0])
 		Main.answers.push_back(arr[1])
+	
+	##Custom
+	Main.update_num_questions()
+	await %SettingsMenu._change_num_questions(Main.num_questions, false)
 
 func _open_load_menu() -> void:
 	%LoadMenu.visible = true

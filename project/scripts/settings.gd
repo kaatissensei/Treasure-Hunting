@@ -10,16 +10,20 @@ signal set_current_question(new_num : int)
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _change_num_questions(new_num_q_boxes : int):
+func _change_num_questions(new_num_q_boxes : int, adjust_main_num : bool = true):
 	var current_num_q_boxes : int = %Questions/QScroll/QAGrid.get_child_count()
 	if new_num_q_boxes > current_num_q_boxes:
 		for i in range(current_num_q_boxes + 1, new_num_q_boxes + 1):
-			Main.add_question()
+			Main.add_question(new_num_q_boxes)
 			%Questions/QScroll/QAGrid.add_child(create_question_box(i))
 	else: #decrease number of questions
 		for j in range (current_num_q_boxes, new_num_q_boxes, -1):
-			Main.remove_question()
+			#if adjust_main_num == true:
+			Main.remove_question(new_num_q_boxes)
+				#print("Removing")
 			%Questions/QScroll/QAGrid.get_child(j-1).queue_free()
+	Main.update_num_questions()
+	%NumQuestions.value = Main.num_questions
 	
 
 func create_question_box(q_num : int) -> LineEdit:

@@ -50,15 +50,21 @@ func reset_question_array():
 	questions.resize(num_questions)
 	answers.resize(num_questions)
 
-func add_question():
-	num_questions += 1
-	questions.push_back("")
-	answers.push_back("")
+func add_question(new_num_questions):
+	if (questions.size() != new_num_questions):
+		num_questions += 1
+		questions.push_back("")
+		answers.push_back("")
 
-func remove_question():
-	num_questions -= 1
-	questions.pop_back()
-	answers.pop_back()
+func remove_question(new_num_questions):
+	if (questions.size() != new_num_questions):
+		num_questions -= 1
+		questions.pop_back()
+		answers.pop_back()
+
+func update_num_questions():
+	num_questions = questions.size()
+	print("There are now %d Qs" % num_questions)
 	
 
 func _get_coords(dig_spot_int : int) -> Array[int]:
