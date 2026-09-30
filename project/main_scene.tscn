@@ -69,12 +69,14 @@ GridContainer/constants/v_separation = 50
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_o8r1j"]
 gradient = SubResource("Gradient_yj5sn")
+fill = 1
+fill_from = Vector2(0.510101, 0.4848485)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y1bqk"]
 shader = ExtResource("8_yj5sn")
 shader_parameter/gradient = SubResource("GradientTexture2D_o8r1j")
-shader_parameter/spread = 0.35
-shader_parameter/cutoff = 0.28
+shader_parameter/spread = 0.315
+shader_parameter/cutoff = 0.22
 shader_parameter/size = 0.5
 shader_parameter/speed = 2.0
 shader_parameter/ray1_density = 8.0
@@ -423,7 +425,6 @@ expand_mode = 1
 
 [node name="Shine" type="TextureRect" parent="CanvasLayer/Island/MarginContainer/DigSpotContainer/DigSpot1" unique_id=419059744]
 unique_name_in_owner = true
-visible = false
 self_modulate = Color(0, 1, 1, 1)
 z_index = -1
 material = SubResource("ShaderMaterial_y1bqk")
@@ -1609,6 +1610,7 @@ vertical_alignment = 1
 
 [node name="MainMenu" type="TextureRect" parent="CanvasLayer" unique_id=677285629]
 unique_name_in_owner = true
+visible = false
 z_index = 150
 anchors_preset = 15
 anchor_right = 1.0
