@@ -266,6 +266,25 @@ Button/styles/pressed = SubResource("StyleBoxEmpty_pec41")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o4blg"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8r1j"]
+bg_color = Color(0.9504964, 0.9482536, 0.77032137, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.8745098, 0.8627451, 0.5137255, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_sk1ci"]
+Button/colors/font_hover_pressed_color = Color(0.61745447, 0.6174548, 0.6174547, 1)
+Button/colors/font_pressed_color = Color(0.5053437, 0.5053442, 0.50534385, 1)
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_o8r1j")
+Button/styles/pressed = SubResource("StyleBoxFlat_o8r1j")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4blg"]
 content_margin_bottom = 10.0
 bg_color = Color(0.98039216, 0.98039216, 0.9019608, 1)
@@ -3171,7 +3190,6 @@ offset_bottom = 151.0
 grow_horizontal = 2
 mouse_filter = 1
 theme = ExtResource("18_o4fqm")
-text = "What color do you like？"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -3184,9 +3202,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -601.0
-offset_top = -278.0
+offset_top = -378.0
 offset_right = 601.0
-offset_bottom = 278.0
+offset_bottom = 282.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("40_uws2o")
@@ -3197,7 +3215,7 @@ layout_mode = 0
 offset_left = 20.0
 offset_top = 39.0
 offset_right = 1182.0
-offset_bottom = 416.0
+offset_bottom = 515.0
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
@@ -3205,6 +3223,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer" unique_id=1560191837]
 layout_mode = 2
+theme_override_constants/separation = 15
 
 [node name="HBoxNumPlayers" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer" unique_id=76416653]
 layout_mode = 2
@@ -3343,12 +3362,51 @@ theme_override_font_sizes/font_size = 40
 text = "View
 Questions"
 
+[node name="HBoxNumQs2" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer" unique_id=1744921949]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs2" unique_id=1198843117]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("18_o4fqm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o4blg")
+text = "Bonus Point:"
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs2" unique_id=318687565]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BonusPtToggle" type="Button" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs2/MarginContainer" unique_id=944189240]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_sk1ci")
+theme_override_fonts/font = ExtResource("30_ek5vw")
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "On"
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/UI/SettingsMenu" unique_id=1475099308]
-layout_mode = 0
-offset_left = 118.0
-offset_top = 435.0
-offset_right = 1084.0
-offset_bottom = 515.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -483.0
+offset_top = -128.0
+offset_right = 483.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_constants/separation = 50
 
 [node name="CancelBtn" type="Button" parent="CanvasLayer/UI/SettingsMenu/HBoxContainer2" unique_id=2093399390]
@@ -3745,6 +3803,7 @@ unique_name_in_owner = true
 [connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumPlayers/NumPlayersSlider" to="." method="_update_num_teams"]
 [connection signal="value_changed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/NumQuestions" to="CanvasLayer/UI/SettingsMenu" method="_change_num_questions"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs/ViewQuestionsBtn" to="CanvasLayer/UI/SettingsMenu" method="_show_questions"]
+[connection signal="toggled" from="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs2/MarginContainer/BonusPtToggle" to="CanvasLayer/UI/SettingsMenu" method="_toggle_bonus_point"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/CancelBtn" to="CanvasLayer/UI/SettingsMenu" method="_close_settings_menu"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/StartButton" to="CanvasLayer/UI/SettingsMenu" method="_restart"]
 [connection signal="pressed" from="CanvasLayer/UI/SettingsMenu/HBoxContainer2/LoadCSVBtn" to="." method="_show_questions"]
