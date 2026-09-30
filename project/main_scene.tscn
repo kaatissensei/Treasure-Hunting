@@ -1658,6 +1658,7 @@ offset_right = 875.0
 offset_bottom = 946.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("16_m35m6")
+theme_override_constants/align_to_largest_stylebox = -1
 theme_override_font_sizes/font_size = 95
 text = "Start!"
 
@@ -1678,6 +1679,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("16_m35m6")
+theme_override_constants/align_to_largest_stylebox = -1
 text = "How to Play"
 
 [node name="LoadCSVMainBtn" type="Button" parent="CanvasLayer/MainMenu/HBoxContainer" unique_id=1512149024]
@@ -1686,6 +1688,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("16_m35m6")
+theme_override_constants/align_to_largest_stylebox = -1
 text = "Load .csv"
 
 [node name="HowToPlayMenu" type="TextureRect" parent="CanvasLayer" unique_id=1093813783]
@@ -3333,6 +3336,7 @@ text = "# of Questions:"
 vertical_alignment = 1
 
 [node name="NumQuestions" type="SpinBox" parent="CanvasLayer/UI/SettingsMenu/MarginContainer/VBoxContainer/HBoxNumQs" unique_id=1224162868]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
